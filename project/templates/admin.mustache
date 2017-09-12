@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>SEQUENCE - Admin Settings</title>
+
+<link rel="stylesheet" type="text/css" href="/style.css">
+
+</head>
+
+
+<body>
+<div id="outer">
+    <div id="navBar">
+
+        <ul id="main-nav">
+            <li class="navOpt1"><a href="/index.html">Home</a></li>
+            <li class="navOpt2"><a href="/about.html">About Us</a></li>
+            <li class="selected"><a href="/account.html">Account</a></li>
+            <li class="navOpt4"><a href="/howtoplay.html">How To Play</a></li>
+            <li class="navOpt5"><a href="/leader.html">Leaderboards</a></li>
+            <li class="navOpt6"><a href="/play.html">Play</a></li>
+        </ul>
+
+    </div>
+    <div id="header">Header</div>
+    <div id="contentouter">
+        <div id="content">  
+            <h2>Admin Page</h2>
+
+            <table id="Admin" border="1">
+                <th>Username</th><th>Password</th><th>Role</th><th>Games Played</th><th>Wins</th><th>Losses</th><th colspan="5" text-align:"center">Admin Actions</th>
+                {{#userData}}
+                <tr>
+                    <td>{{userName}}</td> 
+                    <td>{{password}}</td>
+                    <td>{{role}}</td>
+                    <td>{{gamesPlayed}}</td>
+                    <td>{{wins}}</td>
+                    <td>{{losses}}</td>
+                    <td><a href="/admin/remove/{{userName}}">Remove User</a></td>
+                    <td><a href="/admin/setrole/normal/{{userName}}">Set Normal</a></td>
+                    <td><a href="/admin/setrole/admin/{{userName}}">Set Admin</a></td>
+                    <td><a href="/admin/resetPassword/{{userName}}">Reset Password</a></td>
+                    <td><a href="/admin/resetStats/{{userName}}">Reset Stats</a></td>
+                </tr>
+                {{/userData}}
+            
+            </table>
+
+        </div>
+        <hr>
+        <div id="footer">Footer</div>
+    </div>
+</div>
+</body>
+
+</html>

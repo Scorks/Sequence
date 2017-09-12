@@ -1,0 +1,4 @@
+Alex|Alex|Admin
+foo|bar|Normal
+dog|bone|Normal
+cat|catnip|Normal

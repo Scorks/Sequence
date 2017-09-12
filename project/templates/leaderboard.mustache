@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>SEQUENCE - Leaderboards</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="leaderboard.js"> </script>
+
+</head>
+
+
+<body onload="init()">
+<div id="outer">
+    <div id="navBar">
+
+        <ul id="main-nav">
+            <li class="navOpt1"><a href="index.html">Home</a></li>
+            <li class="navOpt2"><a href="about.html">About Us</a></li>
+            <li class="navOpt3"><a href="account.html">Account</a></li>
+            <li class="navOpt4"><a href="howtoplay.html">How To Play</a></li>
+            <li class="selected"><a href="leader.html">Leaderboards</a></li>
+            <li class="navOpt6"><a href="play.html">Play</a></li>
+        </ul>
+
+    </div>
+    <div id="header"></div>
+    <div id="contentouter">
+        <div id="content">  
+            <h2>Leaderboard</h2>
+            <table id="leaderboard">
+                <th id="userName">Username</th>
+                <th id="gamesPlayed">Games played</th>
+                <th id="wins">Wins</th>
+                <th id="losses">Losses</th> 
+                {{#userData}}
+                <tr>
+                    <td>{{userName}}</td> 
+                    <td>{{gamesPlayed}}</td>
+                    <td>{{wins}}</td>
+                    <td>{{losses}}</td>
+                </tr>
+                {{/userData}}
+            
+            </table>
+
+        </div>
+        <hr>
+        <div id="footer">Footer</div>
+    </div>
+</div>
+</body>
+
+</html>

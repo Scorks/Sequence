@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>SEQUENCE - Log In</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+var errorMsg = "Error logging in. Please try again.";
+
+//add listeners to forms fields to listen for keystrokes
+function initForm()
+{
+    var form = document.getElementById("loginForm");
+    form.username.addEventListener("keyup", loginEnter);
+    form.password.addEventListener("keyup", loginEnter);
+}
+
+//if keystroke is the enter key, call login.
+function loginEnter(evt)
+{
+    evt.preventDefault();
+    if(evt.keyCode == 13) login();
+
+}
+
+// make a login requst
+function login() 
+{
+    var form = document.getElementById("loginForm");
+    var msg = document.getElementById("message");
+
+    // get an AJAX object
+    var xhr = new XMLHttpRequest();
+    if(form.username.value.length > 0) {
+        xhr.open('POST', "/login.html", true);
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState != 4) return;
+            if(xhr.status == 200 || xhr.status == 400) {
+                
+                if(xhr.responseText != errorMsg) {
+                    window.location.href = "/account.html";
+                } 
+                else {
+                    msg.innerHTML = errorMsg;
+                }
+            }
+        }
+        
+        var u = form.username.value;
+        var p = form.password.value;    
+        console.log(u);
+        console.log(p);
+        var objToSend = { username : u, password: p };
+        var loginRequest = JSON.stringify(objToSend);
+        console.log(loginRequest);
+        xhr.send(loginRequest);
+    }
+}
+
+</script>
+</head>
+
+
+<body onload="initForm();">
+<div id="outer">
+    <div id="navBar">
+
+        <ul id="main-nav">
+            <li class="navOpt1"><a href="index.html">Home</a></li>
+            <li class="navOpt2"><a href="about.html">About Us</a></li>
+            <li class="selected"><a href="login.html">Login</a></li>
+            <li class="navOpt4"><a href="howtoplay.html">How To Play</a></li>
+            <li class="navOpt5"><a href="leader.html">Leaderboards</a></li>
+            <li class="navOpt6"><a href="play.html">Play</a></li>
+        </ul>
+
+    </div>
+    <div id="header">Header</div>
+    <div id="contentouter">
+        <div id="content">
+		<h1>Login Page</h1>
+	      <p>
+            Don't have an account? <a href="register.html">register here</a>
+            .</p>
+            <form method="post" id="loginForm">
+                    <input type="text" class="inputs" placeholder="username" name="username">
+            <br>
+                    <input type="password" class="inputs" placeholder="password" name="password"> 
+            <br><br>
+                <input type="button" value="Login" id="loginButton" onclick="login();">
+            <br><br>
+            <div><p id="message"></p></div>
+            </form>
+        </div>
+        <hr>
+        <div id="footer">Footer</div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>SEQUENCE - Account Settings</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- javascript to check if passwords match and current password is correct -->
+<script src="checking.js"> </script>
+
+</head>
+
+<body onload="initSettingsForm()">
+<div id="outer">
+    <div id="navBar">
+
+        <ul id="main-nav">
+            <li class="navOpt1"><a href="index.html">Home</a></li>
+            <li class="navOpt2"><a href="about.html">About Us</a></li>
+            <li class="selected"><a href="account.html">Account</a></li>
+            <li class="navOpt4"><a href="howtoplay.html">How To Play</a></li>
+            <li class="navOpt5"><a href="leader.html">Leaderboards</a></li>
+            <li class="navOpt6"><a href="play.html">Play</a></li>
+        </ul>
+
+    </div>
+    <div id="header">
+        <p><b>Hello, {{username}}!</b></p>
+        <p>Click <a href="logout">HERE</a> to log out of your account.</p>
+    </div>
+    <div id="contentouter">
+        <div id="content">  
+            <h1>Hi there, {{username}}!</h1>
+            <p>Use the following form to change your password.</p>
+
+            <form method="post" id="accountSettingsForm">
+                <div>
+                    <input type="password" class="inputs" placeholder="new password" name="password1">
+                </div>
+                <div>
+                     <input type="password" class="inputs" placeholder="confirm new password" name="password2">
+                    <div id="passwordMsg" class="message"></div>
+                </div>
+                <div>
+                     <input type="password" class="inputs" placeholder="current password" name="currentPassword">
+                    <div id="currentMsg" class="message"></div>
+                </div>
+                <br>
+                <input type="submit" value="Submit"  id="button">
+            </form>
+
+            <p>
+            <div style="display:{{adminDisplay}};"><a href="/admin/admin.html">Admin Settings</a></div>
+            </p>
+
+        </div>
+        <hr>
+        <div id="footer">Footer</div>
+    </div>
+</div>
+</body>
+
+</html>

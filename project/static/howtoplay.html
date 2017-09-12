@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>SEQUENCE - How To Play</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script type="text/javascript" src="howtoplay.js">
+	</script>
+
+	<script type="text/javascript">
+		function initForm() {
+		    var form = document.getElementById('theform')
+		    var count = 0;
+		    genInstruct( count, 'theText' );
+		    /* create the event handler */
+		    form.next.onclick = function( evt ) {
+		    		count++;
+		    		if (count > 3) {
+					count = 0;
+		    		}
+		        genInstruct( count, 'theText' )
+		    }
+		    form.prev.onclick = function( evt ) {
+		    		count--;
+		    		if (count < 0) {
+		    			count = 3;
+		    		}
+		        genInstruct( count, 'theText' )
+		    }
+		    form.rules.onchange = function( evt ) {
+				var f = evt.target.form;
+		        count = parseInt(f.rules.value);
+		        genInstruct ( count, 'theText' )
+		    }
+		}
+	</script>
+
+	<style type="text/css">
+		body { font-family : sans-serif; }
+		
+		form {
+			text-align : center;
+		}
+		
+		h2 {
+			text-align : center;
+		}
+		
+		img {
+			margin : .25em;
+		}
+	</style>
+</head>
+
+
+<body  onload="initForm()">
+<div id="outer">
+    <div id="navBar">
+
+        <ul id="main-nav">
+            <li class="navOpt1"><a href="index.html">Home</a></li>
+            <li class="navOpt2"><a href="about.html">About Us</a></li>
+            <li class="navOpt3"><a href="account.html">Account</a></li>
+            <li class="selected"><a href="howtoplay.html">How To Play</a></li>
+            <li class="navOpt5"><a href="leader.html">Leaderboards</a></li>
+            <li class="navOpt6"><a href="play.html">Play</a></li>
+        </ul>
+
+    </div>
+    <div id="tutorialHeader">
+		<form action="javascript:void 1" id="theform">
+				<button name="prev">&lt;&lt; Previous</button>
+				<select name="rules">
+					<option value=0>What is Sequence?</option>
+					<option value=1>How to Play</option>
+					<option value=2>Making a Sequence</option>
+					<option value=3>Wild Cards</option>
+				</select>
+				<button name="go" onclick = "location.href='play.html'">Play Sequence!</button>
+				<button name="next">Next &gt;&gt;</button>
+			</form>
+    </div>
+    <div id="contentouter">
+        <div id="content" style="height:570px; padding-left:0em; padding-right:0em;">
+			
+
+			<div id="theText">Instructions appear here</div>
+    	    </div>
+    </div>
+</div>
+</body>
+
+</html>

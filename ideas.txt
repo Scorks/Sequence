@@ -1,0 +1,42 @@
+VISION
+------
+
+The game Sequence!!!
+
+needs to have:
+
+user authentication (i.e., the system requires users to be registered and they must sign-in to use most of the system),
+a registration web page to allow a user to create an account,
+a web page to change account detail for a user (e.g., change the account's password),
+a set of administrative web pages that can modify and delete user accounts (administrative web pages should only be accessible by an administrator),
+all the other web pages required for the web application.
+CSS must be used to style the pages, the styling should be consistent across all pages.
+JSON and AJAX must be used for some of the pages.
+
+steps in somewhat arbitrary order:
+1. user authentication, registration pages, admin pages, account
+settings
+1.1 database?
+2. get 1 on 1 game working
+3. chatroom
+4. leaderboard
+...
+n. extras - favorites/friends, badges, AI, color schemes, social media
+sharing, randomized board mode...
+
+responsibilities:
+game logic, instructions - Christine
+CSS, console - Rebecca
+backend, login, admin pages - Alex
+graphics, animations - Caroline
+database, account settings, stats - Karoliina
+
+technologies needed:
+HTML
+CSS
+Spark
+AJAX
+JSON
+database - MySQL? something else?
+Mustache
+

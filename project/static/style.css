@@ -1,0 +1,870 @@
+html, body{ height:100%;width:100%;}
+ 
+  
+inputs:-webkit-input-placeholder {
+    color: #b5b5b5;
+}
+
+inputs-moz-placeholder {
+    color: #b5b5b5;
+}
+
+.inputs {
+    background: #f5f5f5;
+    font-size: 0.8rem;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    padding: 13px 10px;
+    width: 270px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 3px rgba( 0, 0, 0, 0.1 );
+    clear: both;
+}
+
+.inputs:focus {
+    background: #fff;
+    box-shadow: 0 0 0 3px #fff38e, inset 0 2px 3px rgba( 0, 0, 0, 0.2 ), 0px 5px 5px rgba( 0, 0, 0, 0.15 );
+    outline: none;
+}
+
+form {
+    width: 500px;
+}
+
+body{
+    background-color:#DDD;
+    font-family:sans-serif;
+    font-size: medium;
+    line-height:120%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align:center;
+}
+
+h1 {
+	line-height : 100%;
+}
+
+button, select {
+	width : 10em;
+	font-size : medium;
+	margin-left : .5em;
+	margin-right : .5em;
+	border-radius : .5em;
+	padding : .5em;
+	box-shadow : 0 0.15em 0.25em gray;
+}
+
+/* header on home page */
+#name {
+	font-size : 475%;
+	line-height : 50%;
+	margin: 22px 0 0 0;
+}
+
+/* header on about us page*/
+#name2 {
+	font-size : 375%;
+	line-height : 50%;
+	margin: 27px 0 0 0;
+}
+
+p {
+	line-height: 120%;
+}
+
+#outer{
+    position:absolute;
+    left:50%;
+    margin-left:-402px;
+    width:804px;
+    height:757px;
+    text-align:left;
+}
+
+#outer #header{
+    position:relative;
+    background-image:url('headerbackground.png');
+    height:70px;
+    width:774px;
+    z-index:1000;
+    padding:15px;
+    font-size : medium;
+}
+
+#outer #tutorialHeader{
+    position:relative;
+    background-image:url('headerbackground.png');
+    height:70px;
+    width:774px;
+    z-index:1000;
+    font-size : medium;
+    width:801px;
+    height:100px;
+    padding:0px;
+}
+
+#outer #navBar{
+    height:50px;
+}
+
+#outer #contentouter{
+    background-image:url('contentbackground.png');
+    overflow:hidden;
+    height:607px;
+    width:804px;
+    z-index:1000;
+}
+
+#outer #contentouter #content{
+    overflow:auto;
+    height:500px;
+    width:770px;
+    padding:15px;
+}
+
+#outer #footer{
+    width:790px;
+    height:80px;
+    padding:5px;
+}
+
+#outer #footer-links {
+	width:750px;
+    height:80px;
+    padding:5px;
+	padding-left : 2em;
+	padding-right : 2em;
+}
+
+ul#main-nav{
+    -webkit-padding-start:0px;
+    margin-left:50px;
+}
+
+ul#main-nav li {
+    float: left;
+    position: relative; /* z-index cannot be applied if position not specified */
+    display: inline;    /* li by default is block */
+    margin-left:-20px;  /* Shifts over to cause overlap */
+}
+
+ul#main-nav li a {
+    position: relative;
+    display: block;
+    margin-top:20px;
+    width:128px;
+    height:31px;
+    background-image: url('tabbackground.png');
+    color:black;
+    text-decoration: none;
+
+    text-align: center;
+    padding:3px;
+}
+
+ul#main-nav li:hover{
+    font-weight:bold;
+    z-index:499 !important;
+}
+
+ul#main-nav li.selected a{  
+    background-image:url('tabbackgroundselect.png');
+}
+
+ul#main-nav li.selected{
+    z-index:500;
+}
+
+ul#main-nav li.navOpt1{
+    z-index:6;
+}
+
+ul#main-nav li.navOpt2{
+    z-index:5;
+}
+
+ul#main-nav li.navOpt3{
+    z-index:4;
+}
+
+ul#main-nav li.navOpt4{
+    z-index:3;
+}
+
+ul#main-nav li.navOpt5{
+    z-index:2;
+}
+
+ul#main-nav li.navOpt6{
+    z-index:1;
+}
+
+ul#main-nav li.navOpt7{
+    z-index:0;
+}
+
+pre{
+    background-color:lightyellow;
+    border:1px solid black;
+    width:80%;
+    margin:auto;
+    padding:5px;
+}
+
+table#leaderboard {
+    border-collapse: collapse;
+    background-color : white;
+}
+
+table#leaderboard td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table#leaderboard th {
+    border: 1px solid black;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.2);
+    color: rgb(0, 50, 100);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table#leaderboard th:hover {
+    text-decoration: underline;
+}
+
+table#board {
+    width: 500px;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    border: 0px solid black;
+    border-collapse: collapse;
+    float: left;
+}
+
+table#board td {
+    padding: 0;
+}
+
+table#hand {
+    padding: 0;
+    width: 500px;
+    height: 57px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#hand td {
+    padding: 0;
+    background-repeat : no-repeat;
+    border: 2px solid transparent;
+}
+
+td.separator {
+    width: 50px;
+}
+
+table#Admin {
+    border-collapse: collapse;
+    background-color : white;
+}
+
+table#Admin td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table#Admin th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* wildcards */
+
+td.BLUE_JACK {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/remove.png'); 
+   background-size: 100% auto;
+}
+
+td.GREEN_JACK {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/remove.png'); 
+   background-size: 100% auto;
+}
+
+td.RED_JACK {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/wild.png'); 
+   background-size: 100% auto;
+}
+
+td.PURPLE_JACK {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/wild.png'); 
+   background-size: 100% auto;
+}
+
+/*Token Pieces*/
+
+img.tokenImg {
+    width: 46px;
+    height: 46px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* animate token images of a sequence when the sequence is made */
+/* TODO someone can make this prettier if they wish! */
+img.seqAnimation {
+    -moz-animation-name: glow;
+    -moz-animation-duration: .8s;
+    -moz-animation-iteration-count: 4;
+    -moz-animation-timing-function: linear;
+    -moz-animation-direction: alternate;
+
+    -webkit-animation-name: glow;
+    -webkit-animation-duration: .8s;
+    -webkit-animation-iteration-count: 4;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-direction: alternate;
+}
+
+@-moz-keyframes glow {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@-webkit-keyframes glow {
+    from { opacity: 1; }
+    to { opacity: 0; } 
+}
+
+/* player 2's token */
+td.YT {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/YT_transparent.png'); 
+   background-size: 100% auto;
+}
+
+td.YT_B {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/YT_B.png'); 
+   background-size: 100% auto;
+}
+
+td.YT_G {
+    width: 50px;
+    height: 50px;
+    background-image:url('cardImg/YT_G.png'); 
+    background-size: 100% auto;
+}
+
+td.YT_P {
+    width: 50px;
+    height: 50px;
+    background-image:url('cardImg/YT_P.png'); 
+    background-size: 100% auto;
+}
+
+td.YT_R {
+    width: 50px;
+    height: 50px;
+    background-image:url('cardImg/YT_R.png');
+    background-size: 100% auto; 
+}
+
+/* player 1's token */
+td.TT {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/TT_transparent.png'); 
+   background-size: 100% auto;
+}
+
+td.TT_B {
+    width: 50px;
+    height: 50px;
+    background-image:url('cardImg/TT_B.png');
+    background-size: 100% auto; 
+}
+
+td.TT_G {
+    width: 50px;
+    height: 50px;
+    background-image:url('cardImg/TT_G.png');
+    background-size: 100% auto; 
+}
+
+td.TT_P {
+    width: 50px;
+    height: 50px;
+    background-image:url('cardImg/TT_P.png'); 
+    background-size: 100% auto;
+}
+
+td.TT_R {
+    width: 50px;
+    height: 50px;
+    background-image:url('cardImg/TT_R.png'); 
+    background-size: 100% auto;
+}
+
+/*Corner Piece*/
+
+td.C {
+    width: 50px;
+    height: 50px;
+    background-image: url('cardImg/edge.png');
+    background-size: 100% auto;
+
+}
+
+/*BLUE Cards*/
+
+td.BLUE_ACE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/bA.png');
+   background-size: 100% auto;
+}
+
+td.BLUE_TWO {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/b2.png');
+   background-size: 100% auto;
+}
+
+td.BLUE_THREE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/b3.png');
+   background-size: 100% auto;
+}
+
+td.BLUE_FOUR {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/b4.png');
+   background-size: 100% auto;
+}
+
+td.BLUE_FIVE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/b5.png');
+   background-size: 100% auto;
+}
+
+td.BLUE_SIX {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/b6.png');
+   background-size: 100% auto;
+}
+
+td.BLUE_SEVEN {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/b7.png');
+   background-size: 100% auto;
+}
+
+td.BLUE_EIGHT {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/b8.png');
+   background-size: 100% auto;
+}
+
+td.BLUE_NINE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/b9.png');
+   background-size: 100% auto;
+}
+
+td.BLUE_TEN {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/b10.png');
+   background-size: 100% auto;
+}
+
+td.BLUE_KING {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/bK.png');
+   background-size: 100% auto;
+}
+
+td.BLUE_QUEEN {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/bQ.png');
+   background-size: 100% auto;
+}
+
+/*GREEN Cards*/
+
+
+td.GREEN_ACE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/gA.png');
+   background-size: 100% auto;
+}
+
+td.GREEN_TWO {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/g2.png');
+   background-size: 100% auto;
+}
+
+td.GREEN_THREE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/g3.png');
+   background-size: 100% auto;
+}
+
+td.GREEN_FOUR {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/g4.png');
+   background-size: 100% auto;
+}
+
+td.GREEN_FIVE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/g5.png');
+   background-size: 100% auto;
+}
+
+td.GREEN_SIX {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/g6.png');
+   background-size: 100% auto;
+}
+
+td.GREEN_SEVEN {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/g7.png');
+   background-size: 100% auto;
+}
+
+td.GREEN_EIGHT {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/g8.png');
+   background-size: 100% auto;
+}
+
+td.GREEN_NINE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/g9.png');
+   background-size: 100% auto;
+}
+
+td.GREEN_TEN {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/g10.png');
+   background-size: 100% auto;
+}
+
+td.GREEN_KING {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/gK.png');
+   background-size: 100% auto;
+}
+
+td.GREEN_QUEEN {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/gQ.png');
+   background-size: 100% auto;
+}
+
+/*PURPLE Cards*/
+
+td.PURPLE_ACE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/pA.png');
+   background-size: 100% auto;
+}
+
+td.PURPLE_TWO {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/p2.png');
+   background-size: 100% auto;
+}
+
+td.PURPLE_THREE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/p3.png');
+   background-size: 100% auto;
+}
+
+td.PURPLE_FOUR {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/p4.png');
+   background-size: 100% auto;
+}
+
+td.PURPLE_FIVE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/p5.png');
+   background-size: 100% auto;
+}
+
+td.PURPLE_SIX {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/p6.png');
+   background-size: 100% auto;
+}
+
+td.PURPLE_SEVEN {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/p7.png');
+   background-size: 100% auto;
+}
+
+td.PURPLE_EIGHT {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/p8.png');
+   background-size: 100% auto;
+}
+
+td.PURPLE_NINE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/p9.png');
+   background-size: 100% auto;
+}
+
+td.PURPLE_TEN {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/p10.png');
+   background-size: 100% auto;
+}
+
+td.PURPLE_KING {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/pK.png');
+   background-size: 100% auto;
+}
+
+td.PURPLE_QUEEN {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/pQ.png');
+   background-size: 100% auto;
+}
+
+/*RED Cards*/
+
+td.RED_ACE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/rA.png');
+   background-size: 100% auto;
+}
+
+td.RED_TWO {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/r2.png');
+   background-size: 100% auto;
+}
+
+td.RED_THREE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/r3.png');
+   background-size: 100% auto;
+}
+
+td.RED_FOUR {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/r4.png');
+   background-size: 100% auto;
+}
+
+td.RED_FIVE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/r5.png');
+   background-size: 100% auto;
+}
+
+td.RED_SIX {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/r6.png');
+   background-size: 100% auto;
+}
+
+td.RED_SEVEN {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/r7.png');
+   background-size: 100% auto;
+}
+
+td.RED_EIGHT {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/r8.png');
+   background-size: 100% auto;
+}
+
+td.RED_NINE {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/r9.png');
+   background-size: 100% auto;
+}
+
+td.RED_TEN {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/r10.png');
+   background-size: 100% auto;
+}
+
+td.RED_KING {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/rK.png');
+   background-size: 100% auto;
+}
+
+td.RED_QUEEN {
+   width: 50px;
+   height: 50px;
+   background-image:url('cardImg/rQ.png');
+   background-size: 100% auto;
+}
+
+div.message {
+    color: red;
+    display: inline;
+    font-size: 10pt;
+}
+
+/* glass pane is inserted over the player's board during the other player's turn
+ * */
+div.glassPane {
+    position: absolute;
+    height:601px;
+    width:801px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    display: table;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#overlayContent {
+	display : table-cell;
+	font-size : 400%;
+    color : white;
+    text-align : center;
+    vertical-align : middle;
+}
+
+/* for debugging */
+div#info {
+    float: right;
+    display: block;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    font-size : medium;
+}
+
+/* for displaying the last card played on the sidebar during game*/
+table#lastCard {
+	margin-top : 10px;
+	margin-bottom : 10px;
+}
+
+#latestCard{
+	height : 125px;
+	width : 125px;
+	background-repeat : no-repeat;
+}
+
+/* for the tutorial*/
+#theText {
+			margin-left : 2em;
+			margin-right : 2em;
+			text-align : left;
+			font-size : medium;
+		}
+
+#theform {
+	width : 800px;
+	margin-left : 0em;
+	margin-right : 0em;
+	padding-top : 28px;
+}
+
+select {
+			width : 12em;
+			height : 2.25em;
+		}
+
+#cards, #sample {
+			border : none;
+			padding : 0em;
+			margin-left : auto;
+			margin-right : auto;
+			align : center;
+			text-align : center;
+		}
+
+figcaption {
+			font-style: italic;
+		}
+
+figure {
+			margin-top : 0em;
+			margin-bottom : 0em;
+		}
+
+/* for intro on main page and about us */
+div.intro {
+	margin-left : 2em;
+	margin-right : 2em;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>SEQUENCE - Play</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="playGame.js"> </script>
+<script src="initGame.js"> </script>
+
+</head>
+
+
+<body onload="init()">
+<div id="outer">
+    <div id="navBar">
+
+        <ul id="main-nav">
+            <li class="navOpt1"><a href="index.html">Home</a></li>
+            <li class="navOpt2"><a href="about.html">About Us</a></li>
+            <li class="navOpt3"><a href="account.html">Account</a></li>
+            <li class="navOpt4"><a href="howtoplay.html">How To Play</a></li>
+            <li class="navOpt5"><a href="leader.html">Leaderboards</a></li>
+            <li class="selected"><a href="play.html">Play</a></li>
+        </ul>
+
+    </div>
+    <div id="header" style="text-align:center;">
+        <button type="button" id="playNewGame" style="margin-top:13px;">Play New Game</button>
+        <button type="button" id="endGame" style="margin-top:13px;">End Game</button></div>
+    <div id="contentouter">
+        <div id="overlay" class="glassPane">
+        <div id="overlayContent"></div>
+        </div>
+        <div id="content"> 
+            <table id="board">
+            </table> 
+            <div id="info"> <!-- for debugging -->
+                <div id="playerNo"></div>
+                <div id="turn"></div>
+                	<table id="lastCard" style="width:200px">
+                		<tr>
+                			<td id="lcText" colspan=2>
+                			</td>
+                		</tr>
+                		<tr>
+                			<td id="latestCard" style="width:65%">
+                			</td>
+                			<td></td>
+                		</tr>
+                	</table>
+                <div id="mySequences"></div>
+                <div id="opponentSequences"></div>
+            </div> 
+        </div>
+        <div id="footer" style="padding-top:0px">
+            <table id="hand">
+            </table> 
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
